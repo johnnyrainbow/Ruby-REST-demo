@@ -1,6 +1,6 @@
 require 'socket' # Provides TCPServer and TCPSocket classes
 require 'cgi'
-require 'net/http'
+
 # Initialize a TCPServer object that will listen
 # on localhost:2345 for incoming connections.
 
