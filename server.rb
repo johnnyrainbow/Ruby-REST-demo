@@ -3,8 +3,9 @@ require 'cgi'
 require 'net/http'
 # Initialize a TCPServer object that will listen
 # on localhost:2345 for incoming connections.
-port = 2345
-server = TCPServer.new('localhost', port)
+
+server = TCPServer.new('localhost', 2345)
+
 
 # loop infinitely, processing one incoming
 # connection at a time.
@@ -20,6 +21,7 @@ loop do
 
   # Log the request to the console for debugging
   STDERR.puts request
+
 
     admins = [['gabriel'], ['tom']] 
 
@@ -39,6 +41,7 @@ loop do
       response = "<!DOCTYPE HTML> <h3>You entered the name %s</h3> <label>Enter your name</label><form action ='/submit_name' method = 'GET'><input name ='name_field'></form> "% input_val
 
     end
+
 
   # We need to include the Content-Type and Content-Length headers
   # to let the client know the size and type of data
